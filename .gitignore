@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Editors
+/.idea
+/.nova
+/.vscode
+
+# Dependencies
+/node_modules
+/vendor
+
+# Build/cache output
+/dist
+/.parcel-cache
+
+# Local WordPress install
+/wordpress
+
+# Local environment
+.env
+.env.*
