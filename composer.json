@@ -1,34 +1,36 @@
 {
-    "name": "akwaaba/post-campaign-for-brevo",
-    "description": "Create and send campaign with Brevo when publishing a post.",
-    "type": "wordpress-plugin",
-    "license": "GPL-3.0-or-later",
-    "autoload": {
-        "psr-4": {
-            "Akwaaba\\WordPress\\SharePost\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Reüel van der Steege",
-            "email": "reuel@akwaabamultimedia.nl"
-        }
-    ],
-    "config": {
-        "allow-plugins": {
-            "dealerdirect/phpcodesniffer-composer-installer": true,
-            "roots/wordpress-core-installer": true
-        }
-    },
-    "require": {
-        "ext-json": "*"
-    },
-    "require-dev": {
-        "pronamic/wp-coding-standards": "^2.0",
-        "roots/wordpress": "^6.3"
-    },
-    "scripts": {
-        "phpcbf": "XDEBUG_MODE=off vendor/bin/phpcbf",
-        "phpcs": "XDEBUG_MODE=off vendor/bin/phpcs"
-    }
+	"name": "akwaaba/post-campaign-for-brevo",
+	"description": "Create and send campaign with Brevo when publishing a post.",
+	"type": "wordpress-plugin",
+	"license": "GPL-3.0-or-later",
+	"autoload": {
+		"psr-4": {
+			"Akwaaba\\WordPress\\SharePost\\": "src/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Reüel van der Steege",
+			"email": "reuel@akwaabamultimedia.nl"
+		}
+	],
+	"config": {
+		"allow-plugins": {
+			"dealerdirect/phpcodesniffer-composer-installer": true,
+			"roots/wordpress-core-installer": true
+		}
+	},
+	"require": {
+		"ext-json": "*"
+	},
+	"require-dev": {
+		"pronamic/wp-coding-standards": "^2.0",
+		"roots/wordpress": "^6.3",
+		"deployer/deployer": "^7.5"
+	},
+	"scripts": {
+		"phpcbf": "XDEBUG_MODE=off vendor/bin/phpcbf",
+		"phpcs": "XDEBUG_MODE=off vendor/bin/phpcs",
+		"deploy": "DEPLOYER_ROOT=. vendor/bin/dep deploy --no-interaction -v"
+	}
 }
