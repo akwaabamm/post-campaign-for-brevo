@@ -23,6 +23,6 @@
 
 use Akwaaba\WordPress\SharePost\Plugin;
 
-require_once 'vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
 
 Plugin::instance();
