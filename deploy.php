@@ -60,7 +60,7 @@ task(
 		runLocally( 'rsync --recursive --delete --delete-excluded --exclude=.git --exclude=.github --exclude=.dep --exclude=build --exclude=node_modules --exclude=vendor ./ "{{build_path}}"' );
 		runLocally( 'composer install --verbose --prefer-dist --no-progress --no-interaction --no-dev --optimize-autoloader --working-dir={{build_path}}' );
 	}
-)->local();
+);
 
 task(
 	'deploy:update_code',
@@ -94,7 +94,7 @@ task(
 		'deploy:shared',
 		'deploy:symlink',
 		'deploy:unlock',
-		'cleanup',
-		'success',
+		'deploy:cleanup',
+		'deploy:success',
 	]
 );
