@@ -86,12 +86,15 @@ after(
 task(
 	'deploy',
 	[
-		'deploy:prepare',
+		'deploy:info',
+		'deploy:setup',
 		'deploy:lock',
 		'deploy:release',
 		'build',
 		'deploy:update_code',
+		'deploy:env',
 		'deploy:shared',
+		'deploy:writable',
 		'deploy:symlink',
 		'deploy:unlock',
 		'deploy:cleanup',
