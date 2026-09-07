@@ -1,5 +1,7 @@
 # AGENTS.md
 
+Before working in this repository, read the shared workspace instructions in `../../samenwerken/AGENTS.md`; they apply in addition to these repository-specific instructions.
+
 Purpose: contribute safely to the Brevo publication integration with minimal changes.
 
 ## Stack and scope
